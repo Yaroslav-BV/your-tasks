@@ -1,0 +1,11 @@
+@import "utils/libs.scss";   // библиотеки и фреймворки
+@import "utils/vars.scss";   // переменные Sass
+@import "utils/mixins.scss"; // миксины Sass
+@import "utils/fonts.scss";  // шрифты
+
+
+// Основной код со стилями
+
+
+// Модули страницы
+@import "modules/header.scss"; // Модули блоков

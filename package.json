@@ -1,0 +1,54 @@
+{
+  "name": "your-tasks",
+  "version": "0.0.1",
+  "description": "Any person’s task list",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack-dev-server --open --config ./build/webpack.dev.conf.js",
+    "build": "webpack --config ./build/webpack.build.conf.js",
+    "log": "git log --pretty=oneline"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 3 version"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yaroslav-BV/webpack-my-template.git"
+  },
+  "keywords": [],
+  "author": "Yaroslav Badikov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yaroslav-BV/webpack-my-template/issues"
+  },
+  "homepage": "https://github.com/Yaroslav-BV/webpack-my-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/preset-env": "^7.7.7",
+    "autoprefixer": "^9.7.3",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.4.0",
+    "css-mqpacker": "^7.0.0",
+    "cssnano": "^4.1.10",
+    "mini-css-extract-plugin": "^0.8.2",
+    "node-sass": "^4.13.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.1.2",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
+    "@fortawesome/free-brands-svg-icons": "^5.12.0",
+    "@fortawesome/free-regular-svg-icons": "^5.12.0",
+    "@fortawesome/free-solid-svg-icons": "^5.12.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "file-loader": "^4.3.0",
+    "html-webpack-plugin": "^3.2.0"
+  }
+}
