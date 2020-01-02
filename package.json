@@ -14,15 +14,15 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Yaroslav-BV/webpack-my-template.git"
+    "url": "git+https://github.com/Yaroslav-BV/your-tasks.git"
   },
   "keywords": [],
   "author": "Yaroslav Badikov",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Yaroslav-BV/webpack-my-template/issues"
+    "url": "https://github.com/Yaroslav-BV/your-tasks/issues"
   },
-  "homepage": "https://github.com/Yaroslav-BV/webpack-my-template#readme",
+  "homepage": "https://github.com/Yaroslav-BV/your-tasks#readme",
   "devDependencies": {
     "@babel/core": "^7.7.7",
     "@babel/preset-env": "^7.7.7",
