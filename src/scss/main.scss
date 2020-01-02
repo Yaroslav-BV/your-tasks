@@ -5,7 +5,14 @@
 
 
 // Основной код со стилями
+body {
+    font-family: $mainFont;
+}
 
+p {
+    margin: 0;
+}
 
 // Модули страницы
-@import "modules/header.scss"; // Модули блоков
+@import "modules/form-task.scss";
+@import "modules/list-task.scss";

@@ -1,4 +1,5 @@
 import './js/common';
+import 'normalize.css'
 import './css/main.css';
 import './scss/main.scss';
 
