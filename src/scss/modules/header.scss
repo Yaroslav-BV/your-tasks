@@ -13,20 +13,20 @@ header {
         }
 
         &:hover span {
-            color: $colorGreen;
+            color: $colorGood;
         }
         &:hover span:last-child {
-            color: $colorRed;
+            color: $colorBad;
         }
     }
 
     i {
-        color: #fff;
+        color: $colorMain;
         transition: color .4s ease-out;
         cursor: pointer;
 
         &:hover {
-            color: $colorGreen;
+            color: $colorGood;
         }
     }
 
