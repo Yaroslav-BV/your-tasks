@@ -6,13 +6,30 @@
 
 // Основной код со стилями
 body {
+    @include flexDisplay(column, center);
+    background-image: linear-gradient(to bottom, rgb(21, 26, 87), rgb(20, 26, 84), rgb(19, 26, 81), rgb(17, 26, 78), rgb(16, 26, 75), rgb(15, 26, 72), rgb(14, 26, 69), rgb(13, 26, 66), rgb(12, 26, 63), rgb(10, 26, 60), rgb(9, 26, 57), rgb(8, 26, 54));
     font-family: $mainFont;
+    height: 100vh;
 }
 
-p {
-    margin: 0;
+#task {
+    @include flexDisplay(column, center);
+    width: 60%;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+    font-size: x-large;
+}
+
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
 }
 
 // Модули страницы
+@import "modules/header.scss";
 @import "modules/form-task.scss";
 @import "modules/list-task.scss";

@@ -1,0 +1,33 @@
+header {
+    @include flexDisplay(row, center);
+    justify-content: space-between;
+    width: 100vw;
+    box-sizing: border-box;
+    padding: 10px 20px;
+
+    a {
+        font-family: $logoFont;
+
+        span {
+            transition: color .3s ease-out;
+        }
+
+        &:hover span {
+            color: $colorGreen;
+        }
+        &:hover span:last-child {
+            color: $colorRed;
+        }
+    }
+
+    i {
+        color: #fff;
+        transition: color .4s ease-out;
+        cursor: pointer;
+
+        &:hover {
+            color: $colorGreen;
+        }
+    }
+
+}

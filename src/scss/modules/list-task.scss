@@ -1,0 +1,47 @@
+#task-list {
+    @include flexDisplay(column, stretch);
+}
+
+.task-list-item {
+    @include flexDisplay(column, stretch);
+    color: #fff;
+    padding-left: 30px;
+    box-sizing: border-box;
+    box-shadow: inset 10px 0 $colorGreen;
+    transition: all .2s cubic-bezier(0.8, 0.885, 0.32, 1.275);
+
+    &:not(:last-child) {
+        margin-bottom: 20px;
+    }
+
+    &:hover {
+        box-shadow: inset 20px 0 $colorGreen;
+    }
+
+    &-header {
+        @include flexDisplay(row, center);
+        justify-content: space-between;
+
+        &-number {}
+        &-date {}
+        &-nav {
+            i {
+                cursor: pointer;
+            }
+            .fa-stack {
+                &:hover {
+                    .fa-square {color: $colorGreen;}
+                    .fa-check {color: #fff;}
+                }
+            }
+            .fa-check {
+                color: $colorGreen;
+            }
+
+            .fa-minus-square {
+                color: $colorRed;
+            }
+        }
+    }
+
+}
