@@ -10,13 +10,18 @@
     <title>YourTasks</title>
 </head>
 <body>
-
+    <header>
+        <a href="#">
+            <span>Your</span><span>Tasks</span>
+        </a>
+        <i class="fas fa-user-circle fa-3x"></i>
+    </header>
     <section id="task">
         <!-- Форма для ввода задачи -->
         <form name="task-panel" id="form-task" onsubmit="return false">
-            <input type="text" name="task-text" id="form-task-input">
-            <button id="form-task-add">Добавить</button>
-            <button id="form-task-clearAll">Удалить все</button>
+            <input type="text" name="task-text" id="form-task-input" placeholder="Enter your tasks pls...">
+            <button id="form-task-add">Add</button>
+            <button id="form-task-clearAll">CLear All</button>
         </form>
         <!-- Блок вывода задачи -->
         <div id="task-list">
@@ -24,10 +29,42 @@
             <div class="task-list-item">
                 <div class="task-list-item-header">
                     <span class="task-list-item-header-number">#1</span>
-                    <span class="task-list-item-header-date">2 янв 2020 20:11</span>
+                    <span class="task-list-item-header-date">2 jan 2020 - 20:11</span>
                     <span class="task-list-item-header-nav">
                         <span class="fa-stack" style="vertical-align: top;">
-                            <i class="fas fa-square fa-stack-2x"></i>
+                            <i class="far fa-square fa-stack-2x"></i>
+                            <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <i class="far fa-minus-square fa-2x"></i>
+                    </span>
+                </div>
+                <div class="task-list-item-header">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero voluptas dicta error architecto eius, ab rerum, numquam molestiae, qui accusamus ducimus quibusdam maiores a? Dignissimos odit dolorem veniam rem.</p>
+                </div>
+            </div>
+            <div class="task-list-item">
+                <div class="task-list-item-header">
+                    <span class="task-list-item-header-number">#2</span>
+                    <span class="task-list-item-header-date">3 jan 2020 - 15:12</span>
+                    <span class="task-list-item-header-nav">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="far fa-square fa-stack-2x"></i>
+                            <i class="fas fa-check fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <i class="far fa-minus-square fa-2x"></i>
+                    </span>
+                </div>
+                <div class="task-list-item-header">
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore vero voluptas dicta error architecto eius, ab rerum, numquam molestiae, qui accusamus ducimus quibusdam maiores a? Dignissimos odit dolorem veniam rem.</p>
+                </div>
+            </div>
+            <div class="task-list-item">
+                <div class="task-list-item-header">
+                    <span class="task-list-item-header-number">#3</span>
+                    <span class="task-list-item-header-date">3 jan 2020 - 15:20</span>
+                    <span class="task-list-item-header-nav">
+                        <span class="fa-stack" style="vertical-align: top;">
+                            <i class="far fa-square fa-stack-2x"></i>
                             <i class="fas fa-check fa-stack-1x fa-inverse"></i>
                         </span>
                         <i class="far fa-minus-square fa-2x"></i>
