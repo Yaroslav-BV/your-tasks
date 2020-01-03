@@ -4,44 +4,58 @@
 
 .task-list-item {
     @include flexDisplay(column, stretch);
-    color: #fff;
+    color: $colorMain;
     padding-left: 30px;
     box-sizing: border-box;
-    box-shadow: inset 10px 0 $colorGreen;
+    box-shadow: inset 10px 0 $colorItemShadow;
     transition: all .2s cubic-bezier(0.8, 0.885, 0.32, 1.275);
 
     &:not(:last-child) {
         margin-bottom: 20px;
     }
 
-    &:hover {
-        box-shadow: inset 20px 0 $colorGreen;
-    }
 
     &-header {
         @include flexDisplay(row, center);
         justify-content: space-between;
+        font-size: 0.8em;
 
-        &-number {}
-        &-date {}
+        &-number {
+            font-weight: bold;
+        }
+        &-date {
+            font-family: $lightFont;
+            background-color: #00008B;
+            padding: 2px 5px;
+            border-radius: 5px;
+        }
         &-nav {
             i {
                 cursor: pointer;
             }
             .fa-stack {
                 &:hover {
-                    .fa-square {color: $colorGreen;}
-                    .fa-check {color: #fff;}
+                    .fa-square {color: $colorGood;}
+                    .fa-check {color: $colorMain;}
                 }
             }
             .fa-check {
-                color: $colorGreen;
+                color: #c9c9c9;
             }
 
             .fa-minus-square {
-                color: $colorRed;
+                color: $colorBad;
             }
         }
     }
 
+    &-content {
+        p {
+            font-family: $lightFont;
+            font-size: 0.9em;
+            margin: 10px 0;
+            transition: color 0.3s ease-in-out;
+        }
+    }
+    
 }
