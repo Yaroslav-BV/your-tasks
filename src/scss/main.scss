@@ -8,13 +8,14 @@
 body {
     @include flexDisplay(column, center);
     background-image: linear-gradient(to bottom, rgb(21, 26, 87), rgb(20, 26, 84), rgb(19, 26, 81), rgb(17, 26, 78), rgb(16, 26, 75), rgb(15, 26, 72), rgb(14, 26, 69), rgb(13, 26, 66), rgb(12, 26, 63), rgb(10, 26, 60), rgb(9, 26, 57), rgb(8, 26, 54));
+    background-repeat: no-repeat;
     font-family: $mainFont;
     height: 100vh;
 }
 
 #task {
     @include flexDisplay(column, center);
-    width: 60%;
+    width: 50%;
 }
 
 a {
