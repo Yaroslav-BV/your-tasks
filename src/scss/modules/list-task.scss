@@ -1,5 +1,6 @@
 #task-list {
     @include flexDisplay(column, stretch);
+    width: 100%;
 }
 
 .task-list-item {
@@ -31,9 +32,9 @@
         &-nav {
             @include flexDisplay(row, stretch);
 
-            i {
-                color: $colorUnActive;
-            }
+            // i {
+            //     color: $colorUnActive;
+            // }
 
             .check-border, .minus-border {
                 display: flex;
@@ -48,7 +49,7 @@
             .check-border {
                 margin-right: 8px;
             }
-            .minus-border {}
+            // .minus-border {}
         }
     }
 
