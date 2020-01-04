@@ -14,7 +14,6 @@
         margin-bottom: 20px;
     }
 
-
     &-header {
         @include flexDisplay(row, center);
         justify-content: space-between;
@@ -25,27 +24,31 @@
         }
         &-date {
             font-family: $lightFont;
-            background-color: #00008B;
+            background-color: $colorDate;
             padding: 2px 5px;
             border-radius: 5px;
         }
         &-nav {
+            @include flexDisplay(row, stretch);
+
             i {
-                cursor: pointer;
-            }
-            .fa-stack {
-                &:hover {
-                    .fa-square {color: $colorGood;}
-                    .fa-check {color: $colorMain;}
-                }
-            }
-            .fa-check {
-                color: #c9c9c9;
+                color: $colorUnActive;
             }
 
-            .fa-minus-square {
-                color: $colorBad;
+            .check-border, .minus-border {
+                display: flex;
+                width: 22px;
+                height: 22px;
+                border: 2px solid $colorMain;
+                border-radius: 3px;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
             }
+            .check-border {
+                margin-right: 8px;
+            }
+            .minus-border {}
         }
     }
 
