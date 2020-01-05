@@ -1,6 +1,32 @@
 import Consts from './const-task-elem';
 import { TaskElem, NumberTask, DateTask, NavTask, TextTask } from './classes-task-elem';
 
+// Полифил метода append() для IE
+(function (arr) {
+      arr.forEach(function (item) {
+        if (item.hasOwnProperty('append')) {
+          return;
+        }
+        Object.defineProperty(item, 'append', {
+          configurable: true,
+          enumerable: true,
+          writable: true,
+          value: function append() {
+            var argArr = Array.prototype.slice.call(arguments),
+              docFrag = document.createDocumentFragment();
+            
+            argArr.forEach(function (argItem) {
+              var isNode = argItem instanceof Node;
+              docFrag.appendChild(isNode ? argItem : document.createTextNode(String(argItem)));
+            });
+            
+            this.appendChild(docFrag);
+          }
+        });
+      });
+    })([Element.prototype, Document.prototype, DocumentFragment.prototype]);
+
+
 // Объёвляем основные элементы
 const list = document.getElementById('task-list'); // Блок для вставки задач
 const inputTask = document.getElementById('form-task-input');
