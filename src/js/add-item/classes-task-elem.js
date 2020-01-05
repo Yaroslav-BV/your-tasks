@@ -34,9 +34,31 @@ export class NavTask extends TaskElem {
     constructor(tag, className, classIconCheck, classIconClear) {
         super(tag, className);
         this.elem.innerHTML = `
-            <span class="check-border"><i class="${classIconCheck}"></i></span>
-            <span class="minus-border"><i class="${classIconClear}"></i></span>
-        `
+            <span class="check-border unchecked"><i class="${classIconCheck}"></i></span>
+            <span class="minus-border unchecked"><i class="${classIconClear}"></i></span>
+        `;
+        this.elem.firstElementChild.addEventListener('click', function() {
+            if (this.className.indexOf('un') > -1) {
+                this.classList.remove('unchecked');
+                this.classList.add('checked');
+                this.closest('.task-list-item').style.boxShadow = 'inset 20px 0 #32cd32';
+                
+            } else {
+                this.classList.remove('checked');
+                this.classList.add('unchecked');
+                this.closest('.task-list-item').removeAttribute('style');
+            }
+        });
+        this.elem.lastElementChild.addEventListener('click', function() {
+            this.style.backgroundColor = "#ff0000";
+            this.style.border = "2px solid #ff0000";
+            this.style.borderRadius = '50%';
+            this.firstElementChild.style.color = "#fff";
+            this.closest('.task-list-item').style.boxShadow = 'inset 20px 0 #ff0000';
+            this.addEventListener('transitionend', function () {
+                this.closest('.task-list-item').remove();
+            });
+        });
     }
 }
 
