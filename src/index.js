@@ -6,5 +6,4 @@ import './scss/main.scss';
 // Add free library for Font Awesome icon
 import './js/fontawesome.config';
 
-import './js/common';
-
+import './js/add-item/add-task-item';
