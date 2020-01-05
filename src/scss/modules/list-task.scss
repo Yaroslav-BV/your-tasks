@@ -32,30 +32,53 @@
         &-nav {
             @include flexDisplay(row, stretch);
 
-            // i {
-            //     color: $colorUnActive;
-            // }
-
             .check-border, .minus-border {
                 display: flex;
                 width: 22px;
                 height: 22px;
-                border: 2px solid $colorMain;
                 border-radius: 3px;
                 align-items: center;
                 justify-content: center;
                 cursor: pointer;
+                transition: all .2s cubic-bezier(0.8, 0.885, 0.32, 1.275);
             }
             .check-border {
                 margin-right: 8px;
+
+                &.unchecked {
+                    i { color: $colorUnActive; }
+                    border: 2px solid $colorMain;
+
+                    &:hover {
+                        border: 2px solid $colorGood;
+                        i { color: $colorMain; }
+                    }
+                }
+                &.checked {
+                    border: 2px solid $colorGood;
+                    background-color: $colorGood;
+                    border-radius: 50%;
+                    i { color: $colorMain; }
+                }
             }
-            // .minus-border {}
+            .minus-border {
+                &.unchecked {
+                    i { color: $colorUnActive; }
+                    border: 2px solid $colorMain;
+
+                    &:hover {
+                        border: 2px solid $colorBad;
+                        i { color: $colorMain; }
+                    }
+                }
+            }
         }
     }
 
     &-content {
         p {
-            font-family: $lightFont;
+            word-break: break-word;
+            font-family: $mainFont;
             font-size: 0.9em;
             margin: 10px 0;
             transition: color 0.3s ease-in-out;

@@ -57,8 +57,8 @@ function addTask() {
     const head = new TaskElem(Consts.head.tag, Consts.head.class).makeElem(),
           number = new NumberTask(Consts.number.tag, Consts.number.class, nummTask).makeElem(),
           date = new DateTask(Consts.date.tag, Consts.date.class).makeElem(),
-          nav = new NavTask(Consts.nav.tag, Consts.nav.class, 'fas fa-check', 'fas fa-minus').makeElem();
-    
+          nav = new NavTask(Consts.nav.tag, Consts.nav.class, 'fas fa-check', 'fas fa-minus').makeElem();      
+
     const content = new TaskElem(Consts.content.tag, Consts.content.class).makeElem(),
           textTask = new TextTask(Consts.textTask.tag, Consts.textTask.class, textInput).makeElem();
 
